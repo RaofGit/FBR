@@ -1,222 +1,294 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Royal Tax & FBR Services</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>The Royal Tax & FBR Consultants</title>
+
+  <!-- External styles & icons -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Google Ads / Analytics (async) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-CONVERSION_ID');
+  </script>
+
+  <!-- Minimal critical styles for new sections (move to style.css for production) -->
+  <style>
+    /* Small helper CSS so testimonials and lead form display cleanly by default */
+    .testimonials { max-width:1000px; margin:2rem auto; padding:1rem; font-family:Arial, sans-serif; }
+    .testimonials-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; }
+    .testimonial { background:#fff; border:1px solid #e6e6e6; padding:1rem; border-radius:6px; }
+    .rating { color:#f5a623; }
+
+    .lead { max-width:820px; margin:2rem auto; padding:1rem; background:#fafafa; border-radius:8px; border:1px solid #eee; }
+    .lead h2 { margin-top:0; }
+    .lead form { display:grid; gap:0.75rem; grid-template-columns:1fr 1fr; }
+    .lead label { font-size:0.9rem; display:block; margin-bottom:0.25rem; }
+    .lead input, .lead select, .lead textarea { padding:0.6rem; border:1px solid #ccc; border-radius:4px; width:100%; box-sizing:border-box; font-size:1rem; }
+    .lead textarea { grid-column:1 / -1; min-height:90px; resize:vertical; }
+    .lead .actions { display:flex; gap:0.5rem; grid-column:1 / -1; }
+    .btn { display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1rem; border-radius:6px; border:none; cursor:pointer; }
+    .btn.primary { background:#0f8b3a; color:#fff; }
+    .btn.ghost { background:#fff; border:1px solid #ccc; }
+    .lead .note { font-size:0.9rem; color:#555; grid-column:1 / -1; }
+    .visually-hidden { position:absolute!important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }
+    @media (max-width:620px) { .lead form { grid-template-columns:1fr; } }
+  </style>
 </head>
 
 <body>
-
-<!-- NAVBAR -->
-<header class="header">
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-
-                <div class="logo">
-                    <i class="fas fa-calculator"></i>
-                    <span>The Royal Tax Services</span>
-                </div>
-
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-
-            </div>
-        </div>
+  <!-- NAV (semantic, accessible) -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <h1 class="site-title">Royal Tax Services</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">Why Us</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#lead">Get Quote</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<!-- HERO SECTION -->
-<section id="home" class="hero">
-    <div class="hero-content">
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero" aria-label="Home">
+      <h2>Fast & Trusted FBR Tax Services in Pakistan</h2>
+      <p>NTN Registration • Income Tax Return • Sales Tax • Business Registration • FBR Notices</p>
+      <div class="btns">
+        <a href="https://wa.me/923177616631" class="btn primary" aria-label="WhatsApp Now"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+        <a href="#lead" class="btn ghost">Free Consultation</a>
+      </div>
+    </section>
 
-        <h1>FBR & Tax Consultancy Services</h1>
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-heading">
+      <h3 id="services-heading">Our Services</h3>
+      <div class="grid" role="list">
+        <div class="card" role="listitem"><i class="fas fa-id-card"></i><h4>NTN Registration</h4><p>Quick NTN setup with FBR.</p></div>
+        <div class="card" role="listitem"><i class="fas fa-file-invoice"></i><h4>Income Tax Return</h4><p>Accurate & fast filing.</p></div>
+        <div class="card" role="listitem"><i class="fas fa-building"></i><h4>Business Registration</h4><p>Legal business setup support.</p></div>
+        <div class="card" role="listitem"><i class="fas fa-gavel"></i><h4>FBR Notices</h4><p>Expert reply & handling.</p></div>
+      </div>
+    </section>
 
-        <p>
-            NTN Registration, Income Tax Return Filing, Sales Tax Registration,
-            ATL/Filer Services, Business Registration اور FBR Notices کے جوابات
-        </p>
+    <!-- WHY US -->
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <h3 id="about-heading">Why Choose Us</h3>
+      <div class="box">
+        <div>⚡ Fast Processing</div>
+        <div>💰 Affordable Charges</div>
+        <div>🧑‍💼 Expert Consultants</div>
+        <div>📞 24/7 WhatsApp Support</div>
+      </div>
+    </section>
 
-        <div class="hero-buttons">
-            <a href="#contact" class="cta-btn">Free Consultation</a>
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading">
+      <h3 id="testimonials-heading">Customer Reviews</h3>
 
-            <a href="https://wa.me/923177616631" class="whatsapp-btn" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp Now
-            </a>
+      <div class="testimonials-grid">
+        <article class="testimonial" aria-label="Testimonial: Ahmed Khan — Filer Registration">
+          <p class="quote">"The filer registration process was made effortless. The team handled the paperwork and follow-up quickly — I got my registration within days."</p>
+          <div class="meta"><strong>Ahmed Khan</strong> <span class="location">— Karachi</span> <span class="service">(Filer Registration)</span> <span class="rating" aria-hidden="true">★★★★★</span></div>
+        </article>
+
+        <article class="testimonial" aria-label="Testimonial: Ayesha Siddiqui — Business Registration">
+          <p class="quote">"Excellent support for our business registration. Clear guidance, fast submission, and timely updates — highly professional service."</p>
+          <div class="meta"><strong>Ayesha Siddiqui</strong> <span class="location">— Lahore</span> <span class="service">(Business Registration)</span></div>
+        </article>
+
+        <article class="testimonial" aria-label="Testimonial: Muhammad Ali — NTN Registration">
+          <p class="quote">"NTN registration completed without hassle. The team explained every step and ensured all documents were correct before filing."</p>
+          <div class="meta"><strong>Muhammad Ali</strong> <span class="location">— Islamabad</span> <span class="service">(NTN Registration)</span></div>
+        </article>
+
+        <article class="testimonial" aria-label="Testimonial: Fatima Noor — Tax Return Filing">
+          <p class="quote">"Very reliable tax return filing. They maximized deductions and answered my questions patiently — saved me time and stress."</p>
+          <div class="meta"><strong>Fatima Noor</strong> <span class="location">— Multan</span> <span class="service">(Tax Return Filing)</span> <span class="rating" aria-hidden="true">★★★★☆</span></div>
+        </article>
+
+        <article class="testimonial" aria-label="Testimonial: Umar Raza — Filer & NTN Registration">
+          <p class="quote">"Helped us with both filer and NTN registration for our new company. Smooth process and timely communication throughout."</p>
+          <div class="meta"><strong>Umar Raza</strong> <span class="location">— Rawalpindi</span> <span class="service">(Filer &amp; NTN Registration)</span></div>
+        </article>
+
+        <article class="testimonial" aria-label="Testimonial: Zainab Malik — Business Registration & Tax Return">
+          <p class="quote">"They registered our business and handled year-end tax returns. Professional, punctual, and extremely helpful with documentation."</p>
+          <div class="meta"><strong>Zainab Malik</strong> <span class="location">— Peshawar</span> <span class="service">(Business Registration &amp; Tax Return Filing)</span></div>
+        </article>
+
+        <article class="testimonial" aria-label="Testimonial: Hassan Qureshi — Filer Registration">
+          <p class="quote">"Fast filer registration service and clear follow-up. Their team was friendly and answered every question I had."</p>
+          <div class="meta"><strong>Hassan Qureshi</strong> <span class="location">— Faisalabad</span> <span class="service">(Filer Registration)</span></div>
+        </article>
+
+        <article class="testimonial" aria-label="Testimonial: Sana Hussain — NTN & Tax Return Filing">
+          <p class="quote">"NTN and tax return filing done professionally. Excellent attention to detail and great customer service after submission."</p>
+          <div class="meta"><strong>Sana Hussain</strong> <span class="location">— Sialkot</span> <span class="service">(NTN Registration &amp; Tax Return Filing)</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LEAD / QUOTE FORM (added) -->
+    <section id="lead" class="lead" aria-labelledby="lead-heading">
+      <h3 id="lead-heading">Request a Free Quote</h3>
+      <p class="note">Fill in your details and we'll get back to you quickly. You may also send this request via WhatsApp.</p>
+
+      <form id="leadForm" autocomplete="on" novalidate>
+        <div>
+          <label for="lead-name">Full name</label>
+          <input id="lead-name" name="name" type="text" placeholder="e.g. Ahmed Khan" required>
         </div>
 
-    </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="services">
-    <div class="container">
-
-        <h2>Our Services</h2>
-        <p class="section-subtitle">Complete Tax & FBR Solutions</p>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-id-card"></i></div>
-                <h3>NTN Registration</h3>
-                <p>Get your NTN registered quickly with complete guidance.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
-                <h3>Income Tax Return</h3>
-                <p>Accurate and fast income tax return filing service.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-receipt"></i></div>
-                <h3>Sales Tax Registration</h3>
-                <p>Complete sales tax registration with FBR compliance.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-user-check"></i></div>
-                <h3>ATL / Filer Services</h3>
-                <p>Become filer and enjoy tax benefits legally.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-briefcase"></i></div>
-                <h3>Business Registration</h3>
-                <p>Register your business legally and start safely.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-gavel"></i></div>
-                <h3>FBR Notices & Appeals</h3>
-                <p>Replies of FBR notices (114, 122, 111 etc) and appeals.</p>
-            </div>
-
+        <div>
+          <label for="lead-contact">Contact number</label>
+          <!-- Pattern accepts Pakistani formats like +923XXXXXXXXX or 03XXXXXXXXX -->
+          <input id="lead-contact" name="contact" type="tel" placeholder="+923XXXXXXXXX or 03XXXXXXXXX" pattern="^(\+92|0)3\d{9}$" required>
         </div>
-    </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-    <div class="container">
-
-        <h2>About Us</h2>
-
-        <div class="about-content">
-
-            <div class="about-text">
-                <h3>Why Choose Us?</h3>
-                <p>
-                    We provide professional tax & FBR services with accurate guidance,
-                    fast processing and legal compliance.
-                </p>
-
-                <ul class="about-features">
-                    <li><i class="fas fa-star"></i> Experienced Tax Experts</li>
-                    <li><i class="fas fa-star"></i> Fast & Reliable Service</li>
-                    <li><i class="fas fa-star"></i> Affordable Pricing</li>
-                    <li><i class="fas fa-star"></i> 24/7 Support</li>
-                </ul>
-            </div>
-
-            <div class="about-stats">
-                <div class="stat">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-label">Clients</div>
-                </div>
-
-                <div class="stat">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-
-                <div class="stat">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Satisfaction</div>
-                </div>
-            </div>
-
+        <div>
+          <label for="lead-service">Service required</label>
+          <select id="lead-service" name="service" required>
+            <option value="" disabled selected>Choose a service</option>
+            <option value="ntn">1) NTN Registration</option>
+            <option value="tax">2) Tax Return Filing</option>
+            <option value="filer">3) Filer Registration</option>
+            <option value="business">4) Business Registration</option>
+            <option value="pvt">5) PVT Company Registration</option>
+            <option value="trademark">6) Trademark Registration</option>
+          </select>
         </div>
-    </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <div class="container">
-
-        <h2>Contact Us</h2>
-
-        <div class="contact-content">
-
-            <div class="contact-info">
-
-                <div class="info-box">
-                    <i class="fas fa-phone"></i>
-                    <h4>Phone / WhatsApp</h4>
-                    <p>0317-7616631</p>
-                </div>
-
-                <div class="info-box">
-                    <i class="fas fa-envelope"></i>
-                    <h4>Email</h4>
-                    <p>theroyal930@gmail.com</p>
-                </div>
-
-                <div class="info-box">
-                    <i class="fas fa-clock"></i>
-                    <h4>Timing</h4>
-                    <p>Mon - Sat: 9 AM - 6 PM</p>
-                </div>
-
-            </div>
-
-            <form class="contact-form">
-
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="text" placeholder="Subject">
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-
-                <button type="submit" class="submit-btn">Send Message</button>
-
-            </form>
-
+        <div>
+          <label for="lead-message">Additional details (optional)</label>
+          <textarea id="lead-message" name="message" placeholder="Tell us briefly about your case (optional)"></textarea>
         </div>
-    </div>
-</section>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
+        <div class="actions">
+          <button type="submit" class="btn primary" id="lead-submit">Request Quote</button>
+          <button type="button" class="btn ghost" id="lead-wa">Send via WhatsApp</button>
+        </div>
 
-        <p>&copy; 2026 The Royal Tax & FBR Services - All Rights Reserved</p>
+        <div id="lead-status" role="status" aria-live="polite" class="visually-hidden"></div>
+      </form>
+    </section>
 
-        <p>
-            NTN Registration | Income Tax | Sales Tax | Business Registration | FBR Notices
-        </p>
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h3 id="contact-heading">Contact Us</h3>
 
-        <p>
-            📞 0317-7616631 | ✉️ theroyal930@gmail.com
-        </p>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
 
-    </div>
-</footer>
+      <div class="info">
+        <p>📞 0317-7616631</p>
+        <p>📧 theroyal930@gmail.com</p>
+      </div>
+    </section>
+  </main>
 
-<!-- WHATSAPP FLOAT BUTTON -->
-<a href="https://wa.me/923177616631" class="floating-whatsapp" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+  <!-- FLOAT WHATSAPP -->
+  <a href="https://wa.me/923177616631" class="wa" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
 
-<script src="script.js"></script>
+  <!-- Small JS: send lead to backend and fallback to WhatsApp if posting fails.
+       Replace '/api/leads' with your real endpoint or integrate with server-side logic. -->
+  <script>
+    (function () {
+      const form = document.getElementById('leadForm');
+      const statusEl = document.getElementById('lead-status');
+      const waButton = document.getElementById('lead-wa');
+      const whatsappNumber = '923177616631'; // change if needed
 
+      function getFormData() {
+        return {
+          name: form['name'].value.trim(),
+          contact: form['contact'].value.trim(),
+          service: form['service'].value,
+          message: form['message'].value.trim(),
+          source: window.location.href
+        };
+      }
+
+      function buildWhatsAppText(data) {
+        return `Lead request from website%0AName: ${data.name}%0AContact: ${data.contact}%0AService: ${data.service}%0AMessage: ${data.message || 'N/A'}`;
+      }
+
+      async function submitToServer(data) {
+        // NOTE: Change URL to your backend endpoint that stores/leads or sends emails.
+        const endpoint = '/api/leads';
+        try {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          if (!res.ok) throw new Error('Server returned ' + res.status);
+          return await res.json();
+        } catch (err) {
+          throw err;
+        }
+      }
+
+      function openWhatsApp(data) {
+        const text = buildWhatsAppText(data);
+        window.open('https://wa.me/' + whatsappNumber + '?text=' + text, '_blank');
+      }
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        statusEl.classList.remove('visually-hidden');
+        statusEl.textContent = 'Sending…';
+        const data = getFormData();
+
+        // Basic client-side validation
+        if (!data.name || !data.contact || !data.service) {
+          statusEl.textContent = 'Please complete required fields.';
+          return;
+        }
+
+        // Try POST to server, otherwise fallback to WhatsApp
+        try {
+          await submitToServer(data);
+          statusEl.textContent = 'Thanks! Your request was sent. We will contact you soon.';
+          form.reset();
+        } catch (err) {
+          statusEl.textContent = 'Could not send to server — opening WhatsApp so you can send this request.';
+          openWhatsApp(data);
+        }
+      });
+
+      // WhatsApp button to open prefilled message immediately
+      waButton.addEventListener('click', function () {
+        const data = getFormData();
+        if (!data.name || !data.contact || !data.service) {
+          statusEl.classList.remove('visually-hidden');
+          statusEl.textContent = 'Please complete name, contact, and service before using WhatsApp option.';
+          return;
+        }
+        openWhatsApp(data);
+      });
+    })();
+  </script>
+
+  <!-- Your existing script (if any) -->
+  <script src="script.js" defer></script>
 </body>
 </html>
